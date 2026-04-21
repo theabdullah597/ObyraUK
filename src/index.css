@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply bg-white text-slate-700 font-sans;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl font-bold text-slate-900;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold text-slate-900;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold text-slate-900;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h4 {
+    @apply text-lg md:text-xl font-semibold text-slate-900;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-200 inline-flex items-center justify-center gap-2 text-center leading-none hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-slate-100 text-slate-900 rounded-lg font-semibold hover:bg-slate-200 transition-all duration-200 inline-flex items-center justify-center gap-2 text-center leading-none hover:-translate-y-0.5;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-20 lg:py-28;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .brand-text {
+    @apply text-2xl font-bold tracking-tight text-slate-900;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .nav-link {
+    @apply px-4 py-2 rounded-lg text-slate-700 hover:text-indigo-700 hover:bg-indigo-50 font-medium transition-colors duration-200 inline-flex items-center gap-1;
+  }
+
+  .nav-contact {
+    @apply bg-indigo-600 text-white hover:text-white hover:bg-indigo-700;
+  }
+
+  .dropdown-link {
+    @apply flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-slate-700 hover:bg-indigo-50 hover:text-indigo-700;
+  }
+}
+
+.reveal-ready {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}

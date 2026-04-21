@@ -1,0 +1,98 @@
+export const industriesData = [
+  {
+    id: 1,
+    name: "Automotive",
+    description: "Connected vehicles and autonomous driving solutions",
+    icon: "Car",
+  },
+  {
+    id: 2,
+    name: "B2B Software",
+    description: "Enterprise software for business-to-business operations",
+    icon: "BriefcaseBusiness",
+  },
+  {
+    id: 3,
+    name: "Healthcare",
+    description: "Digital health solutions and medical applications",
+    icon: "HeartPulse",
+  },
+  {
+    id: 4,
+    name: "Education",
+    description: "EdTech platforms and learning management systems",
+    icon: "GraduationCap",
+  },
+  {
+    id: 5,
+    name: "Ecommerce",
+    description: "Online retail platforms and shopping experiences",
+    icon: "ShoppingCart",
+  },
+  {
+    id: 6,
+    name: "Food",
+    description: "Restaurant tech and food delivery solutions",
+    icon: "UtensilsCrossed",
+  },
+  {
+    id: 7,
+    name: "Travel",
+    description: "Booking platforms and travel management systems",
+    icon: "Plane",
+  },
+  {
+    id: 8,
+    name: "Fashion and Apparel",
+    description: "Retail technology for fashion industry",
+    icon: "Shirt",
+  },
+  {
+    id: 9,
+    name: "CRM Development",
+    description: "Customer relationship management solutions",
+    icon: "UsersRound",
+  },
+  {
+    id: 10,
+    name: "Logistics",
+    description: "Supply chain and logistics management software",
+    icon: "Truck",
+  },
+  {
+    id: 11,
+    name: "Manufacturing",
+    description: "Industrial automation and production systems",
+    icon: "Factory",
+  },
+  {
+    id: 12,
+    name: "Legal",
+    description: "Legal tech and case management solutions",
+    icon: "Scale",
+  },
+  {
+    id: 13,
+    name: "Agriculture",
+    description: "AgriTech and farming management solutions",
+    icon: "Wheat",
+  },
+  {
+    id: 14,
+    name: "Finance",
+    description: "FinTech and financial services software",
+    icon: "Landmark",
+  },
+  {
+    id: 15,
+    name: "Real Estate",
+    description: "Property management and real estate platforms",
+    icon: "Building2",
+  },
+  {
+    id: 16,
+    name: "Hospitality",
+    description: "Hotel and hospitality management systems",
+    icon: "Hotel",
+  },
+];
