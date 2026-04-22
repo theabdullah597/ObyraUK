@@ -66,7 +66,7 @@ export const Testimonials = () => {
 
   return (
     <div>
-      {/* Hero Section */}
+      Hero Section
       <HeroSection
         title="Client Testimonials"
         subtitle="See what our clients have to say about working with Obyra"
@@ -78,7 +78,7 @@ export const Testimonials = () => {
       <TestimonialsSection testimonials={testimonials} />
 
       {/* Client Stats */}
-      <section className="section-padding bg-blue-50">
+      {/* <section className="section-padding bg-blue-50">
         <div className="container-custom">
           <h2 className="text-4xl font-bold text-center mb-16">Our Impact</h2>
 
@@ -98,7 +98,7 @@ export const Testimonials = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Case Studies */}
       <section className="section-padding bg-white">

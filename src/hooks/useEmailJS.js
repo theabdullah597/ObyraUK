@@ -20,16 +20,16 @@ export const useEmailJS = () => {
         const response = await emailjs.send(
           EMAILJS_CONFIG.SERVICE_ID,
           EMAILJS_CONFIG.TEMPLATE_ID,
-          {
-            from_name: formData.name,
-            from_email: formData.email,
-            phone: formData.phone || "Not provided",
-            company: formData.company || "Not provided",
-            subject: formData.subject || "Contact Form Inquiry",
-            message: formData.message,
-            to_email: EMAILJS_CONFIG.to_email,
-          }
-        );
+            {
+              from_name: formData.name,
+              from_email: formData.email,
+              phone: formData.phone || "Not provided",
+              company: formData.company || "Not provided",
+              subject: formData.subject || "Contact Form Inquiry",
+              message: formData.message,
+              to_email: EMAILJS_CONFIG.TO_EMAIL,
+            }
+          );
 
         if (response.status === 200) {
           setSuccess(true);

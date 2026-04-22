@@ -23,10 +23,10 @@ const LegalPageLayout = ({ title, lastUpdated, children }) => {
               <p>
                 Questions about this policy? Contact us at{" "}
                 <a
-                  href="mailto:hello@obyra.co.uk"
+                  href="mailto:admin@obyra.uk"
                   className="text-indigo-700 hover:text-indigo-800"
                 >
-                  hello@obyra.co.uk
+                  admin@obyra.uk
                 </a>{" "}
                 or visit our{" "}
                 <Link

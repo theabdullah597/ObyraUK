@@ -2,7 +2,6 @@ import {
   FeaturesSection,
   StatsSection,
   ProcessSection,
-  TestimonialsSection,
   CTASection,
 } from "../components/sections/Sections";
 import { imagesData } from "../data/images";
@@ -84,36 +83,6 @@ export const Home = () => {
     {
       title: "Deployment",
       description: "Launch and provide ongoing support",
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "John Smith",
-      title: "CEO",
-      company: "TechCorp",
-      content:
-        "Obyra transformed our digital presence. Their team is professional and delivers excellence.",
-      image: imagesData.heroMain,
-      rating: 5,
-    },
-    {
-      name: "Sarah Johnson",
-      title: "Product Manager",
-      company: "InnovateCo",
-      content:
-        "Working with Obyra was a game-changer. They understood our vision and executed perfectly.",
-      image: imagesData.heroMain,
-      rating: 5,
-    },
-    {
-      name: "Michael Brown",
-      title: "Founder",
-      company: "StartupXYZ",
-      content:
-        "The quality of work and attention to detail is outstanding. Highly recommended!",
-      image: imagesData.heroMain,
-      rating: 5,
     },
   ];
 
@@ -251,9 +220,6 @@ export const Home = () => {
 
       {/* Process Section */}
       <ProcessSection steps={processSteps} />
-
-      {/* Testimonials Section */}
-      <TestimonialsSection testimonials={testimonials} />
 
       {/* CTA Section */}
       <CTASection

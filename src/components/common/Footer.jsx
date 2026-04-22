@@ -174,15 +174,15 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="flex gap-3 items-start">
                 <Phone size={18} className="text-blue-400 mt-1 flex-shrink-0" />
-                <div className="text-sm">+44 (0) 20 XXXX XXXX</div>
+                <div className="text-sm">+44 1544 231982</div>
               </div>
               <div className="flex gap-3 items-start">
                 <Mail size={18} className="text-blue-400 mt-1 flex-shrink-0" />
                 <a
-                  href="mailto:hello@obyra.co.uk"
+                  href="mailto:admin@obyra.uk"
                   className="text-sm hover:text-blue-400 transition-colors"
                 >
-                  hello@obyra.co.uk
+                  admin@obyra.uk
                 </a>
               </div>
               <div className="flex gap-3 items-start">
@@ -190,7 +190,9 @@ export const Footer = () => {
                   size={18}
                   className="text-blue-400 mt-1 flex-shrink-0"
                 />
-                <div className="text-sm">London, UK</div>
+                <div className="text-sm">
+                  61 Bridge Street, Kington, HR5 3DJ
+                </div>
               </div>
             </div>
           </div>

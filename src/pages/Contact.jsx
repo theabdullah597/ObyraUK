@@ -1,17 +1,17 @@
-import { useState } from 'react';
-import { HeroSection } from '../components/sections/Sections';
-import { imagesData } from '../data/images';
-import { useEmailJS } from '../hooks/useEmailJS';
-import { Mail, Phone, MapPin, Loader } from 'lucide-react';
+import { useState } from "react";
+import { HeroSection } from "../components/sections/Sections";
+import { imagesData } from "../data/images";
+import { useEmailJS } from "../hooks/useEmailJS";
+import { Mail, Phone, MapPin, Loader } from "lucide-react";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    subject: "",
+    message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -30,7 +30,7 @@ export const Contact = () => {
 
     // Validate required fields
     if (!formData.name || !formData.email || !formData.message) {
-      alert('Please fill in all required fields');
+      alert("Please fill in all required fields");
       return;
     }
 
@@ -39,12 +39,12 @@ export const Contact = () => {
     if (result.success) {
       setSubmitted(true);
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        subject: '',
-        message: '',
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        subject: "",
+        message: "",
       });
 
       // Reset submitted state after 5 seconds
@@ -205,12 +205,14 @@ export const Contact = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">Email</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      Email
+                    </h3>
                     <a
-                      href="mailto:hello@obyra.co.uk"
+                      href="mailto:admin@obyra.uk"
                       className="text-blue-600 hover:text-blue-700"
                     >
-                      hello@obyra.co.uk
+                      admin@obyra.uk
                     </a>
                   </div>
                 </div>
@@ -222,9 +224,10 @@ export const Contact = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+44 (0) 20 XXXX XXXX</p>
-                    <p className="text-sm text-gray-500">Monday - Friday, 9am - 6pm GMT</p>
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      Phone
+                    </h3>
+                    <p className="text-gray-600">+44 1544 231982</p>
                   </div>
                 </div>
 
@@ -235,8 +238,12 @@ export const Contact = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">Office</h3>
-                    <p className="text-gray-600">London, United Kingdom</p>
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      Office
+                    </h3>
+                    <p className="text-gray-600">
+                      61 Bridge Street, Kington, HR5 3DJ
+                    </p>
                     <p className="text-sm text-gray-500">
                       We work with clients worldwide
                     </p>
@@ -246,25 +253,39 @@ export const Contact = () => {
 
               {/* Quick Links */}
               <div className="mt-12 p-6 bg-blue-50 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  Quick Links
+                </h3>
                 <ul className="space-y-2">
                   <li>
-                    <a href="/services" className="text-blue-600 hover:text-blue-700">
+                    <a
+                      href="/services"
+                      className="text-blue-600 hover:text-blue-700"
+                    >
                       → View Our Services
                     </a>
                   </li>
                   <li>
-                    <a href="/solutions" className="text-blue-600 hover:text-blue-700">
+                    <a
+                      href="/solutions"
+                      className="text-blue-600 hover:text-blue-700"
+                    >
                       → Explore Solutions
                     </a>
                   </li>
                   <li>
-                    <a href="/company/portfolio" className="text-blue-600 hover:text-blue-700">
+                    <a
+                      href="/company/portfolio"
+                      className="text-blue-600 hover:text-blue-700"
+                    >
                       → View Portfolio
                     </a>
                   </li>
                   <li>
-                    <a href="/company/careers" className="text-blue-600 hover:text-blue-700">
+                    <a
+                      href="/company/careers"
+                      className="text-blue-600 hover:text-blue-700"
+                    >
                       → Join Our Team
                     </a>
                   </li>
@@ -275,11 +296,30 @@ export const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section (Optional) */}
-      <section className="h-96 bg-gray-200">
-        <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-600">
-          {/* You can embed a map here using Google Maps API or similar */}
-          <p>Map will be integrated here</p>
+      {/* Map Section */}
+      <section className="bg-white pb-16">
+        <div className="container-custom">
+          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+            <iframe
+              title="Obyra Office Location"
+              src="https://www.google.com/maps?q=61+Bridge+Street,+Kington,+HR5+3DJ&output=embed"
+              width="100%"
+              height="420"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <div className="mt-4 text-sm text-slate-600">
+            <a
+              href="https://maps.google.com/?q=61+Bridge+Street,+Kington,+HR5+3DJ"
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Open in Google Maps
+            </a>
+          </div>
         </div>
       </section>
     </div>
