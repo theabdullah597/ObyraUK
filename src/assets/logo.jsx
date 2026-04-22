@@ -1,4 +1,4 @@
-import obyraLogoImage from "./obyra-logo.svg";
+import obyraLogoImage from "/logo.png";
 
 export const ObyraLogo = ({ className = "h-10 w-auto" }) => {
   return <img src={obyraLogoImage} alt="Obyra" className={className} />;

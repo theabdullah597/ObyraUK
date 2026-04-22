@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Globe, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { ObyraLogo } from "../../assets/logo";
 
 export const Footer = () => {
@@ -19,18 +19,6 @@ export const Footer = () => {
               Leading UK-based software development company delivering
               innovative mobile and web solutions.
             </p>
-            <div className="flex gap-3">
-              {[MessageCircle, Send, Globe].map((Icon, idx) => (
-                <a
-                  key={idx}
-                  href="#"
-                  className="w-9 h-9 rounded-lg border border-gray-700 flex items-center justify-center hover:text-blue-400 hover:border-blue-400 transition-colors"
-                  aria-label="Social link"
-                >
-                  <Icon size={16} />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Services */}
@@ -215,15 +203,24 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>&copy; {currentYear} Obyra. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-blue-400 transition-colors">
+            <Link
+              to="/privacy-policy"
+              className="hover:text-blue-400 transition-colors"
+            >
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-blue-400 transition-colors">
+            </Link>
+            <Link
+              to="/terms-of-service"
+              className="hover:text-blue-400 transition-colors"
+            >
               Terms of Service
-            </a>
-            <a href="#" className="hover:text-blue-400 transition-colors">
+            </Link>
+            <Link
+              to="/cookie-policy"
+              className="hover:text-blue-400 transition-colors"
+            >
               Cookie Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

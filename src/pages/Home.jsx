@@ -1,5 +1,4 @@
 import {
-  HeroSection,
   FeaturesSection,
   StatsSection,
   ProcessSection,
@@ -11,9 +10,11 @@ import { servicesData } from "../data/services";
 import {
   BriefcaseBusiness,
   Rocket,
+  Shield,
   ShieldCheck,
   Target,
   Users,
+  CheckCircle2,
   Zap,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -59,6 +60,12 @@ export const Home = () => {
     { number: "50+", label: "Team Members" },
     { number: "15+", label: "Industries Served" },
     { number: "99.9%", label: "Client Satisfaction" },
+  ];
+
+  const heroHighlights = [
+    "Product strategy and architecture support",
+    "Senior engineers for web and mobile delivery",
+    "Scalable cloud-native solutions with secure foundations",
   ];
 
   const processSteps = [
@@ -113,20 +120,87 @@ export const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <HeroSection
-        title={
-          <>
-            We are a Software
-            <br />
-            Development
-            <br />
-            Company
-          </>
-        }
-        subtitle="We are your trusted development partner with just one goal in focus to build products that generate a lasting, profitable impact."
-        backgroundImage={imagesData.heroMain}
-        ctaText="Start Your Project"
-      />
+      <section className="relative overflow-hidden bg-slate-950 text-white">
+        <div className="absolute inset-0">
+          <img
+            src={imagesData.heroMain}
+            alt="Software development team collaboration"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-indigo-950/70" />
+        </div>
+
+        <div className="relative container-custom py-20 md:py-24 lg:py-28">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-indigo-300/30 bg-indigo-500/10 px-4 py-2 text-sm text-indigo-100 mb-6">
+                <Shield size={16} className="text-indigo-300" />
+                Trusted UK Software Development Partner
+              </div>
+
+              <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+                Build digital products that deliver measurable business growth.
+              </h1>
+
+              <p className="text-lg text-slate-200 max-w-2xl mb-8">
+                We design and engineer high-performance web and mobile platforms
+                for startups and enterprises, combining strategy, execution, and
+                long-term support.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Link to="/contact" className="btn-primary">
+                  Start Your Project
+                </Link>
+                <Link
+                  to="/services"
+                  className="px-6 py-3 border border-slate-300/50 rounded-lg font-semibold text-white hover:bg-white/10 transition-colors"
+                >
+                  Explore Services
+                </Link>
+              </div>
+
+              <div className="space-y-3">
+                {heroHighlights.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-start gap-3 text-slate-200"
+                  >
+                    <CheckCircle2
+                      size={18}
+                      className="text-indigo-300 mt-1 flex-shrink-0"
+                    />
+                    <p>{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-7 md:p-8 shadow-2xl">
+              <h3 className="text-white text-2xl font-bold mb-6">
+                Why teams choose Obyra
+              </h3>
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                {stats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="rounded-xl bg-white/10 border border-white/15 p-4"
+                  >
+                    <p className="text-2xl font-bold text-white">
+                      {stat.number}
+                    </p>
+                    <p className="text-sm text-slate-200">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-slate-200">
+                From concept to launch, we partner with your team to reduce
+                delivery risk and accelerate outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Features Section */}
       <FeaturesSection
@@ -157,7 +231,10 @@ export const Home = () => {
                 >
                   <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
-                  <Link to={`/services?category=${key}`} className="btn-secondary text-sm w-full">
+                  <Link
+                    to={`/services?category=${key}`}
+                    className="btn-secondary text-sm w-full"
+                  >
                     Learn More
                   </Link>
                 </div>

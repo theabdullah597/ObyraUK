@@ -11,6 +11,7 @@ import { Industries } from "./pages/Industries";
 import { Solutions } from "./pages/Solutions";
 import { Work } from "./pages/Work";
 import { Contact } from "./pages/Contact";
+import { PrivacyPolicy, TermsOfService, CookiePolicy } from "./pages/Legal";
 
 // Company Pages
 import { About } from "./pages/Company/About";
@@ -37,6 +38,9 @@ function App() {
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/work" element={<Work />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
 
             {/* Company Pages */}
             <Route path="/company/about" element={<About />} />
