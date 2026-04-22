@@ -1,35 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
 
 @import "tailwindcss";
 
 @layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   * {
     @apply box-border;
   }
 
   body {
     @apply bg-white text-slate-700 font-sans;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
   }
 
   h1 {
     @apply text-4xl md:text-5xl font-bold text-slate-900;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   h2 {
     @apply text-3xl md:text-4xl font-bold text-slate-900;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   h3 {
     @apply text-2xl font-semibold text-slate-900;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   h4 {
     @apply text-lg md:text-xl font-semibold text-slate-900;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   p {
@@ -64,12 +71,12 @@
 
   .gradient-text {
     @apply bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   .brand-text {
     @apply text-2xl font-bold tracking-tight text-slate-900;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   .nav-link {
@@ -88,7 +95,9 @@
 .reveal-ready {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .reveal-in {
