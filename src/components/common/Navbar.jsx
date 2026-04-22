@@ -80,7 +80,7 @@ export const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className="lg:hidden pb-5 border-t border-slate-200">
+          <div className="lg:hidden pb-5 border-t border-slate-200 max-h-[calc(100vh-5rem)] overflow-y-auto overscroll-y-contain">
             <div className="pt-3 space-y-1">
               {navItems.map((item) => {
                 const hasDropdown = Boolean(item.columns);
