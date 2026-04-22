@@ -17,7 +17,6 @@ import { PrivacyPolicy, TermsOfService, CookiePolicy } from "./pages/Legal";
 import { About } from "./pages/Company/About";
 import { Process } from "./pages/Company/Process";
 import { Careers } from "./pages/Company/Careers";
-import { Testimonials } from "./pages/Company/Testimonials";
 import { Clients, University, Manifesto } from "./pages/Company/More";
 import { Blog, News, Press, Events } from "./pages/Company/Additional";
 
@@ -46,7 +45,6 @@ function App() {
             <Route path="/company/about" element={<About />} />
             <Route path="/company/process" element={<Process />} />
             <Route path="/company/careers" element={<Careers />} />
-            <Route path="/company/testimonials" element={<Testimonials />} />
             <Route path="/company/clients" element={<Clients />} />
             <Route path="/company/university" element={<University />} />
             <Route path="/company/manifesto" element={<Manifesto />} />

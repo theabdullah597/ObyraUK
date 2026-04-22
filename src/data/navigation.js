@@ -30,7 +30,6 @@ const companyLinks = [
   { label: 'Careers', path: '/company/careers' },
   { label: 'Clients', path: '/company/clients' },
   { label: 'University', path: '/company/university' },
-  { label: 'Testimonials', path: '/company/testimonials' },
   { label: 'Manifesto', path: '/company/manifesto' },
 ];
 
